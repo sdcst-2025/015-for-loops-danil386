@@ -22,3 +22,11 @@ enter a number:4
 ****
 
 """
+
+x = input("enter a number (an integer less than 10): ")
+x = int(x)
+draw = 0
+
+
+for draw in range(0,x):
+    print("*" * x)

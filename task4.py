@@ -23,3 +23,17 @@ Enter total payments for month(2)  : 75
 Your closing balance is $51.51
 
 """
+
+month=0
+closing = 0
+
+for month in range(1,13):
+    purchase = input(f"Enter total purchases for month({month}): ")
+    payment = input(f"Enter total payments for month({month}): ")
+    purchase = float(purchase)
+    payment = float(payment)
+    interest = (closing+(purchase-payment))*(2/100)
+    if interest > 0:
+        print(f"2% interest has been charged: {interest}")
+    closing = closing + (purchase-payment) + interest
+    print(f"Your closing balance is ${closing}")

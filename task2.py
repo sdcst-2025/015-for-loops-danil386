@@ -14,3 +14,13 @@ Your GST is 2.75
 Your PST is 3.85
 Your total is 61.65
 """
+item = 1
+price = 0
+
+for item in range(1,6):
+    item = input(f"enter in price of item #{item} (in dollars.cents): ")
+    item = float(item)
+    price = price + item
+    price = round(price, 2)
+
+print(f"your subtotal is {price}")
